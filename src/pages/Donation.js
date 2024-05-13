@@ -1,5 +1,6 @@
 import { DefaultLayout } from "../layouts/Default";
 import BannerImage from "../assets/donation.jpeg"
+import QrCode from "../assets/qr-transparent.png";
 import styled from "styled-components";
 
 const MainBanner = styled.div`
@@ -39,6 +40,12 @@ const Container = styled.div`
   grid-gap: 30px;
 `;
 
+const ImageHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
 export function Donation() {
   return (
     <DefaultLayout>
@@ -48,6 +55,9 @@ export function Donation() {
             <Quote>Many a times miseries also become the means to attaining God. This is why whatever state God keeps us in we should be contented</Quote>
           </TextHolder>
         </MainBanner>
+        <ImageHolder>
+          <img src={QrCode} alt="qr-code" />
+        </ImageHolder>
       </Container>
     </DefaultLayout>
   )

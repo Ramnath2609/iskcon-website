@@ -75,6 +75,12 @@ const StyledImage = styled.img`
   }
 `;
 
+const ListViewWrapper = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
 export function Images() {
   const [category, setCategory] = useState("Home");
 
@@ -96,7 +102,9 @@ export function Images() {
         </TitleGrid>
         <Content>
           <Category onClick={onChange} selectedItem={category} />
-          <Dropdown onValueChange={onChange} options={[{ title: "Home", id: 1 }, { title: "Altar", id: 2 }, { title: "With Prabhupada", id: 3 }, { title: "Udhampur Deities", id: 4 }]} />
+          <ListViewWrapper>
+            <Dropdown onValueChange={onChange} options={[{ title: "Home", id: 1 }, { title: "Altar", id: 2 }, { title: "With Prabhupada", id: 3 }, { title: "Udhampur Deities", id: 4 }]} />
+          </ListViewWrapper>
           <Gallery images={images[category]} />
         </Content>
       </Container>

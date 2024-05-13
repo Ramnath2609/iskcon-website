@@ -35,7 +35,7 @@ const LightText = styled.p`
 
 const Mobile = styled.div`
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 40px auto;
   grid-gap: 20px;
   align-items: center;
 `;
@@ -44,7 +44,6 @@ const ImageWrapper = styled.div`
   height: 100%;
   text-align: center;
 `;
-
 export function Contact() {
   return (
     <DefaultLayout>
@@ -54,24 +53,26 @@ export function Contact() {
         </ImageWrapper>
         <ContactContainer>
           <div>
-            <TitleText>Ashram name</TitleText>
-            <LightText>2464  Royal Ln. Mesa, New Jersey 45463</LightText>
-            <LightText>Elgin St. Celina</LightText>
-            <LightText>Canada</LightText>
+            <TitleText>ISKCON Temple</TitleText>
+            <LightText>Srila Prabhupada Ashram,</LightText>
+            <LightText>Srila Prabhupada Marg,</LightText>
+            <LightText>Srila Prabhupada Nagar,</LightText>
+            <LightText>Udhampur,</LightText>
+            <LightText>Jammu and Kashmir - 182101.</LightText>
           </div>
           <div>
             <Mobile>
               <img src={Phone} alt="mobile" />
               <div>
                 <TitleText>Phone</TitleText>
-                <LightText>+91 4175 237200, 237400, 235624</LightText>
+                <LightText>+91 90860 06726</LightText>
               </div>
             </Mobile>
             <Mobile>
               <img src={Mail} alt="mail" />
               <div>
                 <TitleText>Mail</TitleText>
-                <LightText>debra.holt@example.com</LightText>
+                <LightText>nyswami@pamho.net</LightText>
               </div>
             </Mobile>
           </div>

@@ -1,24 +1,28 @@
+import { useCallback, useState } from "react";
 import styled from "styled-components";
+import { Dropdown } from "./Dropdown";
 
-const Title = styled.div`
+const Title = styled.p`
   font-family: Roboto;
   font-size: 34px;
   font-weight: 700;
   line-height: 47.6px;
   text-align: left;
   color: #844531;
+  margin: 0;
   @media (max-width: 768px) {
     font-size: 18px;
     line-height: 26px;
   }
 `;
 
-const Description = styled.div`
+const Description = styled.p`
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
   line-height: 36px;
   text-align: left;
+  margin: 0;
   color: #9C6958;
   @media (max-width: 768px) {
     font-size: 14px;
@@ -52,12 +56,55 @@ const Grid = styled.div`
   }
 `;
 
-export function BlogTile() {
+const IFrame = styled.iframe`
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 250px;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export function BlogTile({ data }) {
+  const [showFullText, shouldShowFullText] = useState(false);
+  const [lang, setLang] = useState(data.english ? "english" : "hindi")
+
+  const onReadMore = useCallback(() => {
+    shouldShowFullText(!showFullText);
+  }, [showFullText]);
+
+  const onValueChange = useCallback((val) => {
+    setLang(val.toLowerCase())
+  }, []);
+
   return (
     <Grid>
-      <Title>This Year, Dream the Impossible. Commit to a Better Planet!</Title>
-      <Description>We are all born to do something unique and wonderful on this planet. Make sure you don’t let this opportunity pass by. Take up something creative in the new year. Not a year should pass without doing something creative.</Description>
-      <ReadMoreButton>Read More</ReadMoreButton>
+      <TitleWrapper>
+        <Title>{data[lang].title}</Title>
+        {(data.english && data.hindi) && <Dropdown onValueChange={onValueChange} defaultValue={"English"} options={[{
+          id: 1,
+          title: "English"
+        },
+        {
+          id: 2,
+          title: "Hindi"
+        }]} />}
+      </TitleWrapper>
+      <Description>{data[lang].description}</Description>
+      {showFullText && (
+        <>
+          <Description>{data[lang].text}</Description>
+          {data[lang].youtubeLink && (
+            <IFrame width="560" height="315" src={data[lang].youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></IFrame>
+          )}
+        </>
+      )}
+      <ReadMoreButton onClick={onReadMore}>{showFullText ? "Read less" : "Read more"}</ReadMoreButton>
     </Grid>
   );
 }

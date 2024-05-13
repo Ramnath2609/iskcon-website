@@ -71,7 +71,14 @@ export function Quotes() {
         <Quote>"</Quote>
         <Flex>
           <QuoteText>
-            Many a times miseries also become the means to attaining God. This is why whatever state God keeps us in we should be contented
+            If someone finds faults
+            with us, instead of
+            feeling bad, we should
+            be happy that
+            Our
+            shortcomings
+            are being
+            removed.
           </QuoteText>
           <ImageHolder>
             <LeafImage src={Leaf} alt="leaf" />
@@ -82,16 +89,33 @@ export function Quotes() {
         <Quote>"</Quote>
         <Flex>
           <QuoteText>
-            Many a times miseries also become the means to attaining God. This is why whatever state God keeps us in we should be contented
+            The name of God is great, but when this name is uttered through the lips of devotees, it becomes very potent.
           </QuoteText>
+          <ImageHolder>
+            <LeafImage src={Leaf} alt="leaf" />
+          </ImageHolder>
         </Flex>
       </Wrapper>
       <Wrapper>
         <Quote>"</Quote>
         <Flex>
           <QuoteText>
-            Many a times miseries also become the means to attaining God. This is why whatever state God keeps us in we should be contented
+            A person who is deeply entrenched in sense gratification should not sit on the preacher's seat.
           </QuoteText>
+          <ImageHolder>
+            <LeafImage src={Leaf} alt="leaf" />
+          </ImageHolder>
+        </Flex>
+      </Wrapper>
+      <Wrapper>
+        <Quote>"</Quote>
+        <Flex>
+          <QuoteText>
+            Following the spiritual master's instructions is of utmost importance. One who lives under the guidance of the spiritual master will most definitely go back to Godhead.
+          </QuoteText>
+          <ImageHolder>
+            <LeafImage src={Leaf} alt="leaf" />
+          </ImageHolder>
         </Flex>
       </Wrapper>
     </Carousel>

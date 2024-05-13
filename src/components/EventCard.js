@@ -50,6 +50,8 @@ const ImageHolder = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -63,17 +65,17 @@ const DesciptionBlock = styled.div`
   }
 `;
 
-export function EventCard() {
+export function EventCard({ data }) {
   return (
     <Card>
       <DesciptionBlock>
         <Meta>March 4 - March 7</Meta>
-        <Title>Discourse, Music and Meditation</Title>
+        <Title>{data.title}</Title>
         <SubMeta>Yogic art International center</SubMeta>
         <SubMeta>4140 Parker Rd. Allentown, New Mexico 31134</SubMeta>
       </DesciptionBlock>
       <ImageHolder>
-        <Image src={DummyImage} alt="event" />
+        <Image src={data.image} alt="event" />
       </ImageHolder>
     </Card>
   );

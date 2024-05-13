@@ -50,9 +50,6 @@ export const CloseButton = styled.button`
 
 export const DropdownWrapper = styled.div`
     margin: 20px;
-    @media (min-width: 768px) {
-      display: none;
-    }
 `;
 
 export const DropdownHeader = styled.div`
@@ -62,7 +59,7 @@ export const DropdownHeader = styled.div`
     align-items: center;
     border: 1px solid #844531;
     padding: 8px 12px;
-    width: 200px;
+    /* width: 200px; */
     border-radius: 8px;
     box-sizing: border-box;
     cursor: pointer;

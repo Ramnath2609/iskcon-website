@@ -83,10 +83,11 @@ export function Footer() {
           <SubHeading>Contact Us</SubHeading>
           <Stack>
             <img src={LocationIcon} alt="location" />
-            <p>Canada</p>
+            <p>India</p>
           </Stack>
-          <p>2972 Westheimer Rd. </p>
-          <p>Illinois 85486 </p>
+          <p>ISKCON Temple</p>
+          <p>Udhampur</p>
+          <p>Jammu and Kashmir 182101</p>
         </div>
         <div>
           <SubHeading>Join Us</SubHeading>

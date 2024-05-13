@@ -5,6 +5,7 @@ import Left from "../assets/CaretLeft.svg";
 import Right from "../assets/CaretRight.svg";
 import Down from "../assets/CaretDown.svg";
 import { EventCard } from "./EventCard";
+import { eventsData } from "./eventsData";
 
 const EventsWrapper = styled.div`
   margin: 60px auto;
@@ -135,10 +136,9 @@ export function Events() {
           Upcoming
         </UpcomingButton>
       </ButtonsWrapper>
-      <EventCard />
-      <EventCard />
-      <EventCard />
-      <EventCard />
+      {eventsData.map((ev) => (
+        <EventCard data={ev} />
+      ))}
     </EventsWrapper>
   )
 }

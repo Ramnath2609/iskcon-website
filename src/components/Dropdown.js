@@ -3,10 +3,10 @@ import { DropdownHeader, DropdownList, DropdownWrapper } from './styles';
 import { ListItem } from './ListItem';
 import Down from "../assets/CaretDown.svg";
 
-export function Dropdown({ options, onValueChange }) {
+export function Dropdown({ options, onValueChange, defaultValue }) {
   const [selectedItem, setSelectedItem] = React.useState(null);
   const dropdownRef = React.useRef(null);
-  const [headerTitle, setHeaderTitle] = React.useState('Home');
+  const [headerTitle, setHeaderTitle] = React.useState(defaultValue ?? 'Home');
   const [isListOpen, setIsListOpen] = React.useState(false);
   const toggleList = React.useCallback(() => setIsListOpen(!isListOpen), [isListOpen]);
 

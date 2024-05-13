@@ -41,6 +41,7 @@ const Text = styled.p`
 
 const Title = styled.h2`
   color: #844531;
+  text-align: center;
 `;
 
 export function Details() {
@@ -48,8 +49,10 @@ export function Details() {
     <Grid>
       <StyledImage src={Image} alt="maharaja" />
       <Content>
-        <Title>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
-        <Text>Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar. Fermentum scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies purus iaculis.Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar. Fermentum scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies purus iaculis.</Text>
+        <Title>Meeting with His Spiritual Master – His Divine Grace A C Bhaktivedanta Swami, Srila Prabhupada</Title>
+        <Text>Maharaj ji came to Delhi where one day in a marketplace he was quite impressed to see some foreign devotees distributing Krishna books. He followed them and reached the Hare Krishna temple at Palam, Delhi, and by the divine arrangement of lord Krishna maharaj ji had the first darshans of His Divine Grace A C Bhaktivedanta swami Srila Prabhupada.</Text>
+        <Text>
+          Then in the year 1974 month of February His Holiness got initiation from His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada, the founder Acharya of ISKCON and formally became his disciple. In this formal meeting, Srila Prabhupada asked Mahraj ji, “what is your name” Maharaj ji replied, “Yogendra Sharma” Srila Prabhupada said, “from today onwards you are Nava Yogendra Das”.</Text>
       </Content>
     </Grid>
   );

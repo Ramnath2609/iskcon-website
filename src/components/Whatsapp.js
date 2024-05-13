@@ -44,7 +44,7 @@ export function Whatsapp() {
         <img src={WhatsppIcon} alt="whatsapp" />
         <TextContent>
           <Title>Join our Whatsapp Community</Title>
-          <CursiveText>Click Here</CursiveText>
+          <CursiveText>Send "ADD" to +91-90860-06726</CursiveText>
         </TextContent>
       </Wrapper>
     </Container>

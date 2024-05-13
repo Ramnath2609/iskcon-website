@@ -6,6 +6,7 @@ import { MobileNav } from "./MobileNav";
 
 const Navbar = styled.div`
   height: 80px;
+  z-index: 999;
   position: fixed;
   top: 0;
   width: 100%;

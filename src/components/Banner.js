@@ -62,8 +62,8 @@ export function Banner() {
     <MainBanner>
       <TextHolder>
         <TitleText>The Essence of spirituality</TitleText>
-        <Description>For over 50 years, Radhanath Swami, a monk in the bhakti tradition, has committed his life to guiding individuals toward deeper purpose and driving social initiatives through the transformative power of bhakti.For over 50 years, Radhanath Swami, a monk in the bhakti tradition, has committed his life.</Description>
-        <Button>View Journey</Button>
+        <Description>For over 50 years, H.H Nava Yogendra Swami, a Naishtik Brahamachari and an exalted mahabhagwat vaishnava in the bhakti tradition, has dedicated his life in the mission of Sri Chaitanya Mahaprabhu’s saving fallen souls, teaching by his own example he is guiding individuals towards ultimate goal of this human form of life, which is to attain “Krishna Prema” and “ante Narayan Smriti”(remembrance of Krishna at the time of death).</Description>
+        {/* <Button>View Journey</Button> */}
       </TextHolder>
     </MainBanner>
   );
