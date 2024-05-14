@@ -24,7 +24,7 @@ const Description = styled.p`
   text-align: left;
   margin: 0;
   color: #9C6958;
-  white-space: pre;
+  white-space: pre-wrap;
   @media (max-width: 768px) {
     font-size: 14px;
     line-height: 26px;
