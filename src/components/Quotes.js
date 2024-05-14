@@ -64,60 +64,22 @@ const LeafImage = styled.img`
   }
 `;
 
-export function Quotes() {
+export function Quotes({ data }) {
   return (
     <Carousel showArrows={false} showStatus={false}>
-      <Wrapper>
-        <Quote>"</Quote>
-        <Flex>
-          <QuoteText>
-            If someone finds faults
-            with us, instead of
-            feeling bad, we should
-            be happy that
-            Our
-            shortcomings
-            are being
-            removed.
-          </QuoteText>
-          <ImageHolder>
-            <LeafImage src={Leaf} alt="leaf" />
-          </ImageHolder>
-        </Flex>
-      </Wrapper>
-      <Wrapper>
-        <Quote>"</Quote>
-        <Flex>
-          <QuoteText>
-            The name of God is great, but when this name is uttered through the lips of devotees, it becomes very potent.
-          </QuoteText>
-          <ImageHolder>
-            <LeafImage src={Leaf} alt="leaf" />
-          </ImageHolder>
-        </Flex>
-      </Wrapper>
-      <Wrapper>
-        <Quote>"</Quote>
-        <Flex>
-          <QuoteText>
-            A person who is deeply entrenched in sense gratification should not sit on the preacher's seat.
-          </QuoteText>
-          <ImageHolder>
-            <LeafImage src={Leaf} alt="leaf" />
-          </ImageHolder>
-        </Flex>
-      </Wrapper>
-      <Wrapper>
-        <Quote>"</Quote>
-        <Flex>
-          <QuoteText>
-            Following the spiritual master's instructions is of utmost importance. One who lives under the guidance of the spiritual master will most definitely go back to Godhead.
-          </QuoteText>
-          <ImageHolder>
-            <LeafImage src={Leaf} alt="leaf" />
-          </ImageHolder>
-        </Flex>
-      </Wrapper>
+      {data.map((d) => (
+        <Wrapper>
+          <Quote>"</Quote>
+          <Flex>
+            <QuoteText>
+              {d.attributes.text}
+            </QuoteText>
+            <ImageHolder>
+              <LeafImage src={Leaf} alt="leaf" />
+            </ImageHolder>
+          </Flex>
+        </Wrapper>
+      ))}
     </Carousel>
   );
 }

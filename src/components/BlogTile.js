@@ -24,6 +24,7 @@ const Description = styled.p`
   text-align: left;
   margin: 0;
   color: #9C6958;
+  white-space: pre;
   @media (max-width: 768px) {
     font-size: 14px;
     line-height: 26px;
@@ -72,7 +73,7 @@ const TitleWrapper = styled.div`
 
 export function BlogTile({ data }) {
   const [showFullText, shouldShowFullText] = useState(false);
-  const [lang, setLang] = useState(data.english ? "english" : "hindi")
+  const [lang, setLang] = useState(data.engTitle ? "english" : "hindi")
 
   const onReadMore = useCallback(() => {
     shouldShowFullText(!showFullText);
@@ -85,8 +86,8 @@ export function BlogTile({ data }) {
   return (
     <Grid>
       <TitleWrapper>
-        <Title>{data[lang].title}</Title>
-        {(data.english && data.hindi) && <Dropdown onValueChange={onValueChange} defaultValue={"English"} options={[{
+        <Title>{lang === "english" ? data.engTitle : data.hindiTitle}</Title>
+        {(data.engTitle && data.hindiTitle) && <Dropdown onValueChange={onValueChange} defaultValue={"English"} options={[{
           id: 1,
           title: "English"
         },
@@ -95,12 +96,12 @@ export function BlogTile({ data }) {
           title: "Hindi"
         }]} />}
       </TitleWrapper>
-      <Description>{data[lang].description}</Description>
+      <Description>{lang === "english" ? data.engDescription : data.hindiDescription}</Description>
       {showFullText && (
         <>
-          <Description>{data[lang].text}</Description>
-          {data[lang].youtubeLink && (
-            <IFrame width="560" height="315" src={data[lang].youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></IFrame>
+          <Description>{lang === "english" ? data.engContent : data.hindiContent}</Description>
+          {data.youtubeLink && (
+            <IFrame width="560" height="315" src={data.youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></IFrame>
           )}
         </>
       )}

@@ -2,8 +2,7 @@ import { DefaultLayout } from "../layouts/Default";
 import styled from "styled-components";
 import Div1 from "../assets/Divider1.svg";
 import Div2 from "../assets/divider2.svg";
-import { BlogTile } from "../components/BlogTile";
-import { blogData } from "../components/blogsData";
+import { BlogsContainer } from "../containers/BlogsContainer";
 
 const Container = styled.div`
   display: grid;
@@ -62,10 +61,7 @@ export function Blogs() {
             <StyledImage src={Div2} alt="divider-2" />
           </ImageHolder>
         </TitleGrid>
-        {blogData.map((data) => (
-          <BlogTile data={data} />
-        ))}
-
+        <BlogsContainer />
       </Container>
     </DefaultLayout>
   )
