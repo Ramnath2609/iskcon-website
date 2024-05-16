@@ -52,7 +52,7 @@ const Grid = styled.div`
   width: 50%;
   grid-gap: 30px;
   box-sizing: border-box;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     width: 100%;
   }
 `;

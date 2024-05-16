@@ -14,23 +14,39 @@ const Wrapper = styled.div`
   grid-template-rows: 400px 400px;
   grid-row-gap: 30px;
   width: 80%;
+  @media (max-width: 768px) {
+    grid-template-rows: 200px auto;
+  }
 `;
 
 const ContactContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
 `;
 
 const TitleText = styled.h2`
   color: #844531;
   font-size: 34px;
   line-height: 47px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin: 8px 0;
+  }
 `;
 
 const LightText = styled.p`
   color: #9C6958;
   font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 8px 0;
+  }
 `;
 
 const Mobile = styled.div`

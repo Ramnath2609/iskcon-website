@@ -30,6 +30,10 @@ const Quote = styled.h2`
   line-height: 52px;
   color: #F7EBE7;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 36px;
+  }
 `;
 
 const Container = styled.div`
@@ -44,6 +48,13 @@ const ImageHolder = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  @media (max-width: 768px) {
+    width: auto;
+  }
+`;
+
+const StyledImage = styled.img`
+  width: 100%;
 `;
 
 export function Donation() {
@@ -56,7 +67,7 @@ export function Donation() {
           </TextHolder>
         </MainBanner>
         <ImageHolder>
-          <img src={QrCode} alt="qr-code" />
+          <StyledImage src={QrCode} alt="qr-code" />
         </ImageHolder>
       </Container>
     </DefaultLayout>
