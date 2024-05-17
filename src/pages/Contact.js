@@ -58,6 +58,7 @@ const Mobile = styled.div`
 
 const ImageWrapper = styled.div`
   height: 100%;
+  width: 100%;
   text-align: center;
 `;
 export function Contact() {
