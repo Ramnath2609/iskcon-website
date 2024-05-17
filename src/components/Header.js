@@ -3,6 +3,8 @@ import styled, { keyframes } from "styled-components"
 import Logo from "../assets/TEST.png"
 import { useCallback, useState } from "react";
 import { MobileNav } from "./MobileNav";
+import OpenIcon from "../assets/icons8-hamburger.svg"
+import CloseIcon from "../assets/icons8-close.svg"
 
 const Navbar = styled.div`
   height: 80px;
@@ -108,6 +110,10 @@ const Open = styled.button`
     }
 `;
 
+const StyledImage = styled.img`
+  width: 20px;
+`;
+
 export function Header() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false)
@@ -124,8 +130,8 @@ export function Header() {
     <Navbar>
       <Flex>
         {!isOpen ? <Open onClick={onToggle} className="header">
-          &#9776;
-        </Open> : <Close onClick={onToggle}>&times;</Close>}
+          <StyledImage src={OpenIcon} alt="open" />
+        </Open> : <Close onClick={onToggle}><StyledImage src={CloseIcon} alt="close" /></Close>}
         <ImageHolder onClick={onHomeClick}>
           <img src={Logo} alt="logo" width="100%" />
         </ImageHolder>
