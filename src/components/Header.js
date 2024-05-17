@@ -80,20 +80,10 @@ const Flex = styled.div`
   }
 `;
 
-const anim = keyframes`
-  from {
-    left: 0;
-  };
-  to {
-    left: 30px;
-  }
-`;
-
 const Close = styled.button`
     font-size: 30px;
     background: none;
     border: none;
-    animation: ${anim} 0.2s linear;
     display: none;
     @media (max-width: 768px) {
       display: block;
