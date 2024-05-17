@@ -73,9 +73,8 @@ const ImageHolder = styled.div`
 const Flex = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: 30px 60px;
+  grid-template-columns: 40px 60px;
   @media (max-width: 768px) {
-    margin-left: 16px;
   }
 `;
 
@@ -89,7 +88,7 @@ const anim = keyframes`
 `;
 
 const Close = styled.button`
-    font-size: 34px;
+    font-size: 30px;
     background: none;
     border: none;
     animation: ${anim} 0.2s linear;
