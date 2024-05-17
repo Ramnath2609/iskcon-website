@@ -55,6 +55,14 @@ const Mobile = styled.div`
   align-items: center;
 `;
 
+const StyledImage = styled.img`
+  height: 100%;
+  width: auto;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
 const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
@@ -65,7 +73,7 @@ export function Contact() {
     <DefaultLayout>
       <Wrapper>
         <ImageWrapper>
-          <img src={Image} alt="maharaj" />
+          <StyledImage src={Image} alt="maharaj" />
         </ImageWrapper>
         <ContactContainer>
           <div>
