@@ -1,5 +1,5 @@
 import { NavLink as Link, useNavigate } from "react-router-dom"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import Logo from "../assets/TEST.png"
 import { useCallback, useState } from "react";
 import { MobileNav } from "./MobileNav";
@@ -81,7 +81,6 @@ const Flex = styled.div`
 `;
 
 const Close = styled.button`
-    font-size: 30px;
     background: none;
     border: none;
     display: none;
@@ -91,7 +90,6 @@ const Close = styled.button`
 `;
 
 const Open = styled.button`
-    font-size: 20px;
     background: none;
     border: none;
     display: none;
