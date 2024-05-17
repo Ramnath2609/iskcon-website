@@ -65,11 +65,18 @@ const ImageHolder = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const Flex = styled.div`
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: 30px 60px;
+  @media (max-width: 768px) {
+    margin-left: 16px;
+  }
 `;
 
 const anim = keyframes`
@@ -86,9 +93,7 @@ const Close = styled.button`
     background: none;
     border: none;
     animation: ${anim} 0.2s linear;
-    position: absolute;
     display: none;
-    margin-right: 20px;
     @media (max-width: 768px) {
       display: block;
     }
@@ -98,9 +103,7 @@ const Open = styled.button`
     font-size: 20px;
     background: none;
     border: none;
-    position: absolute;
     display: none;
-    margin-right: 20px;
     @media (max-width: 768px) {
       display: block;
     }
