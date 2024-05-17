@@ -5,7 +5,7 @@ import Phone from "../assets/phone.svg";
 import Mail from "../assets/mail.svg";
 
 const Wrapper = styled.div`
-  margin: 60px auto;
+  margin: 60px 30px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0px 4px 10px 0px #00000026;
@@ -13,7 +13,6 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-rows: 400px 400px;
   grid-row-gap: 30px;
-  width: 80%;
   @media (max-width: 768px) {
     grid-template-rows: 200px auto;
   }
@@ -66,7 +65,7 @@ export function Contact() {
     <DefaultLayout>
       <Wrapper>
         <ImageWrapper>
-          <img src={Image} alt="maharaj" height="100%" />
+          <img src={Image} alt="maharaj" />
         </ImageWrapper>
         <ContactContainer>
           <div>
